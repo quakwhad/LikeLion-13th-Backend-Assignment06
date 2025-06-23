@@ -34,7 +34,7 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorizeRequests -> authorizeRequests
                         .requestMatchers("/login/oauth2/**").permitAll()
                         .requestMatchers("/members/**").permitAll() // members로 시작하는 경로는 허용
-                        .requestMatchers("/comments/**").permitAll() // posts도 허용
+                        .requestMatchers("/comments/**").permitAll() // comments도 허용
                         .requestMatchers("/index.html").permitAll() // index.html도 허용
                         .anyRequest().authenticated()   // 그 외 모든 요청은 인증 필요
                 )
